@@ -2,8 +2,10 @@ version: "3"
 
 services:
   web:
-    image: webdevops/php-apache:alpine-php7
+    build:
+      context: ./php-apache
+      dockerfile: Dockerfile
     ports:
       - "4500:80"
     volumes:
-      - ../app:/app
+      - ./../app:/var/www/html

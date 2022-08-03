@@ -1,11 +1,9 @@
+var url = "http://localhost:4500/home/list";
+
 $.ajax({
 	method: "GET",
-	url: "index.php",
-	dataType: 'json',
-	data: {
-		controller: "home",
-		action: "list"
-	}
+	url: url,
+	dataType: 'json'
 }).done(function(response) {
 	console.log(response['data']);
 });

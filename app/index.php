@@ -9,6 +9,11 @@ require_once 'config.php';
 // Inicia a sessão
 session_start();
 
-$route = new Route($_GET['controller'], $_GET['action'], $_POST['data']);
+$controller = null;
+$action = null;
+
+list($controller, $action) = explode('/', $_GET['path']);
+
+$route = new Route($controller, $action, $_POST['data']);
 
 ?>

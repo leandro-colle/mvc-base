@@ -36,7 +36,7 @@ function __autoload($className) {
 		return true;
 	}
 
-	echo "Classe $className não encontrada";
+	require_once ABSPATH . '/includes/404.php';
 	exit;
 }
 
