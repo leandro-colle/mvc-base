@@ -36,8 +36,8 @@ function __autoload($className) {
 		return true;
 	}
 
-	require_once ABSPATH . '/includes/404.php';
-	exit;
+	header($_SERVER["SERVER_PROTOCOL"]." 404 Not Found", true, 404);
+	include ABSPATH . '/includes/404.php';
 }
 
 ?>
